@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inbox">
+
+    <fragment
+        android:id="@+id/nav_inbox"
+        android:name="com.skite.catchat.ui.inbox.InboxFragment"
+        android:label="@string/nav_inbox"
+        tools:layout="@layout/fragment_inbox" >
+        <action
+            android:id="@+id/action_nav_inbox_to_halpActivity"
+            app:destination="@id/halpActivity" />
+        <action
+            android:id="@+id/action_nav_inbox_to_feedbackActivity"
+            app:destination="@id/feedbackActivity" />
+        <action
+            android:id="@+id/action_nav_inbox_to_nav_tools"
+            app:destination="@id/nav_tools" />
+        <action
+            android:id="@+id/action_nav_inbox_to_nav_draftz"
+            app:destination="@id/nav_draftz" />
+        <action
+            android:id="@+id/action_nav_inbox_to_nav_share"
+            app:destination="@id/nav_share" />
+        <action
+            android:id="@+id/action_nav_inbox_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_nav_inbox_to_nav_send"
+            app:destination="@id/nav_send" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_draftz"
+        android:name="com.skite.catchat.ui.draftz.DraftzFragment"
+        android:label="@string/nav_drafts"
+        tools:layout="@layout/fragment_draftz" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.skite.catchat.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.skite.catchat.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.skite.catchat.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.skite.catchat.ui.send.SendFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+    <activity
+        android:id="@+id/halpActivity"
+        android:name="com.skite.catchat.HalpActivity"
+        android:label="activity_halp"
+        tools:layout="@layout/activity_halp" />
+    <activity
+        android:id="@+id/feedbackActivity"
+        android:name="com.skite.catchat.FeedbackActivity"
+        android:label="activity_feedback"
+        tools:layout="@layout/activity_feedback" />
+</navigation>
